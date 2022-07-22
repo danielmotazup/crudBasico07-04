@@ -38,4 +38,9 @@ public class Produto {
     public Long getId() {
         return id;
     }
+
+
+    public boolean validaStatus(){
+        return this.status.equals(StatusProduto.INATIVO);
+    }
 }
