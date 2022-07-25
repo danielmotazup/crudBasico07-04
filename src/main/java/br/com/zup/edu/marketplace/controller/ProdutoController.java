@@ -1,4 +1,4 @@
-package br.com.zup.edu.marketplace;
+package br.com.zup.edu.marketplace.controller;
 
 import br.com.zup.edu.marketplace.model.Produto;
 import br.com.zup.edu.marketplace.repository.ProdutoRepository;

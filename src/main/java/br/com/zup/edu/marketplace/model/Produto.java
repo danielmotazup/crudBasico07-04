@@ -39,6 +39,21 @@ public class Produto {
         return id;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public StatusProduto getStatus() {
+        return status;
+    }
+
+    public BigDecimal getPreco() {
+        return preco;
+    }
 
     public boolean validaStatus(){
         return this.status.equals(StatusProduto.INATIVO);

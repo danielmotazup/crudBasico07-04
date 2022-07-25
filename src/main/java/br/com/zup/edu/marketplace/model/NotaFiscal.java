@@ -1,6 +1,7 @@
 package br.com.zup.edu.marketplace.model;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,5 +28,21 @@ public class NotaFiscal {
      */
     @Deprecated
     public NotaFiscal() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Usuario getDestinatario() {
+        return destinatario;
+    }
+
+    public List<Produto> getItens() {
+        return itens;
+    }
+
+    public BigDecimal valorTotal(){
+        return itens.stream().map(Produto::getPreco).reduce(BigDecimal.ZERO,BigDecimal::add);
     }
 }
